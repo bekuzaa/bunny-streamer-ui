@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2024-03-12 16:40+0700\n"
+"PO-Revision-Date: 2024-03-12 16:40+0700\n"
+"Last-Translator: \n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/views/Edit/Wizard/VideoProfile.js:15
+msgid "Video setup"
+msgstr "ตั้งค่าวิดีโอ"
+
+#: src/views/Edit/Wizard/VideoProfile.js:22
+msgid "The video source is compatible. Select the desired resolution:"
+msgstr "แหล่งวิดีโอเข้ากันได้ เลือกความละเอียดที่ต้องการ:"
+
+#: src/views/Edit/Wizard/VideoProfile.js:26
+msgid "Profile"
+msgstr "โปรไฟล์"
+
+#: src/views/Edit/Wizard/VideoProfile.js:31
+msgid "Your stream needs to be encoded, but there's no suitable encoder available."
+msgstr "สตรีมของคุณต้องเข้ารหัส แต่ไม่มีตัวเข้ารหัสที่เหมาะสม"
+
+#: src/views/Edit/Wizard/VideoProfile.js:37
+msgid "Your stream needs to be encoded. Choose the desired encoder:"
+msgstr "สตรีมของคุณต้องเข้ารหัส เลือกตัวเข้ารหัสที่ต้องการ:"
+
+#: src/views/Edit/Wizard/VideoProfile.js:41
+msgid "Decoder"
+msgstr "ตัวถอดรหัส"
+
+#: src/views/Edit/Wizard/VideoProfile.js:46
+msgid "Encoder"
+msgstr "ตัวเข้ารหัส"
+
+#: src/views/Edit/Wizard/VideoProfile.js:57
+msgid "Back"
+msgstr "ย้อนกลับ"
+
+#: src/views/Edit/Wizard/VideoProfile.js:65
+msgid "Next"
+msgstr "ถัดไป"
+
+#: src/views/Publication/Services/Telegram.js:13
+msgid "Transmit a Livestream to a Telegram Channel."
+msgstr "ส่งสตรีมสดไปยังช่องทาง Telegram"
+
+#: src/views/Publication/Services/Image2.js:25
+msgid "Transmit snapshots of the main source to an HTTP/S Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งภาพถ่ายจากแหล่งข้อมูลหลักไปยังเซิร์ฟเวอร์ HTTP/S ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Icecast.js:21
+msgid "Transmit the audio channel of the main source to an Icecast Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งช่องเสียงจากแหล่งข้อมูลหลักไปยังเซิร์ฟเวอร์ Icecast ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/HLS.js:29
+msgid "Transmit the main source as HTTP-Live-Streaming (HLS) to an HTTP/S Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักในรูปแบบ HTTP-Live-Streaming (HLS) ไปยังเซิร์ฟเวอร์ HTTP/S ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/DASH.js:27
+msgid "Transmit the main source as MPEG-DASH to an HTTP/S Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักในรูปแบบ MPEG-DASH ไปยังเซิร์ฟเวอร์ HTTP/S ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Brightcove.js:15
+msgid "Transmit the main source to a Brightcove Live Service. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังบริการ Brightcove Live ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/CDN77.js:15
+msgid "Transmit the main source to an CDN77 RTMP Service. More about the setup <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังบริการ CDN77 RTMP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/DaCast.js:18
+msgid "Transmit the main source to an DaCast RTMP Service. More about the setup <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังบริการ DaCast RTMP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Core.js:19
+msgid "Transmit the main source to an datarhei Core Ressource. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังทรัพยากร datarhei Core ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Livespotting.js:15
+msgid "Transmit the main source to an livespotting.com Ressource. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังทรัพยากร livespotting.com ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/MPEGTS.js:27
+msgid "Transmit the main source to an MPEG-TS Service. More details about the settings can be found here <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังบริการ MPEG-TS ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Red5.js:17
+msgid "Transmit the main source to an Red5/Pro Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังเซิร์ฟเวอร์ Red5/Pro ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/RTMP.js:24
+msgid "Transmit the main source to an RTMP(e|s|t|te|ts) Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังเซิร์ฟเวอร์ RTMP(e|s|t|te|ts) ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/RTSP.js:28
+msgid "Transmit the main source to an RTSP Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังเซิร์ฟเวอร์ RTSP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/SRT.js:25
+msgid "Transmit the main source to an SRT Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังเซิร์ฟเวอร์ SRT ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/UDP.js:23
+msgid "Transmit the main source to an UDP Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังเซิร์ฟเวอร์ UDP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/WOWZA.js:20
+msgid "Transmit the main source to an WOWZA Server. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังเซิร์ฟเวอร์ WOWZA ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Akamai.js:17
+msgid "Transmit the main source to the Akamai (MSL) Media Services Live. More details about the MSL Encoder settings can be found on <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังบริการ Akamai (MSL) Media Services Live ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่า MSL Encoder ได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Livepush.js:17
+msgid "Transmit the main source to the Livepush RTMP Service. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังบริการ Livepush RTMP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/NimoTv.js:18
+msgid "Transmit the main source to the Nimo TV RTMP Service. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังบริการ Nimo TV RTMP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/PicartoTv.js:17
+msgid "Transmit the main source to the Picarto TV RTMP Service. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังบริการ Picarto TV RTMP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Restream.js:18
+msgid "Transmit the main source to the Restream RTMP Service. More details about the settings can be found <0>here</0>."
+msgstr "ส่งแหล่งข้อมูลหลักไปยังบริการ Restream RTMP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Azure.js:17
+msgid "Transmit to a Azure Media Services. More details can be found <0>here</0>."
+msgstr "ส่งไปยังบริการ Azure Media Services ดูรายละเอียดเพิ่มเติมได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Linkedin.js:16
+msgid "Transmit to LinkedIn. More details can be found <0>here</0>."
+msgstr "ส่งไปยัง LinkedIn ดูรายละเอียดเพิ่มเติมได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Dailymotion.js:15
+msgid "Transmit your Livestream to an Dailymotion RTMP service. <0>Here </0>you can find more details about the settings."
+msgstr "ส่งสตรีมสดของคุณไปยังบริการ Dailymotion RTMP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Kick.js:16
+msgid "Transmit your Livestream to an Kick.com RTMP service. <0>Here </0>you can find more details about the settings."
+msgstr "ส่งสตรีมสดของคุณไปยังบริการ Kick.com RTMP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Owncast.js:15
+msgid "Transmit your Livestream to an Owncast server. <0>Here </0>you can find more details about the settings."
+msgstr "ส่งสตรีมสดของคุณไปยังเซิร์ฟเวอร์ Owncast ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Rumble.js:16
+msgid "Transmit your Livestream to an Rumble RTMP service. <0>Here </0>you can find more details about the settings."
+msgstr "ส่งสตรีมสดของคุณไปยังบริการ Rumble RTMP ดูรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Wettercom.js:16
+msgid "Transmit your Livestream to wetter.com. Contact the publisher  <0>here </0>."
+msgstr "ส่งสตรีมสดของคุณไปยัง wetter.com ติดต่อผู้เผยแพร่ได้ <0>ที่นี่</0>"
+
+#: src/views/Publication/Services/Youtube.js:21
+msgid "Transmits your video as an RTMP stream with the required key generated in YouTube Studio. You can find more information on setting up a live stream at YouTube's <0>Creator Academy</0>."
+msgstr "ส่งวิดีโอของคุณเป็นสตรีม RTMP พร้อมคีย์ที่สร้างใน YouTube Studio คุณสามารถดูข้อมูลเพิ่มเติมเกี่ยวกับการตั้งค่าสตรีมสดได้ที่ <0>Creator Academy</0> ของ YouTube"
+
+#: src/views/Publication/Services/Twitter.js:20
+msgid "Transmits your video stream with the required key, which was generated in Twitter Producer. You can find more information on seting up a live stream at Twitter's <0>Producer</0>."
+msgstr "ส่งสตรีมวิดีโอของคุณพร้อมคีย์ที่จำเป็น ซึ่งสร้างขึ้นใน Twitter Producer คุณสามารถดูข้อมูลเพิ่มเติมเกี่ยวกับการตั้งค่าสตรีมสดได้ที่ <0>Producer</0> ของ Twitter"
+
+#: src/misc/coders/Encoders/video/h264_libx264.js:103
+#: src/misc/coders/Encoders/video/hevc_libx265.js:103
+msgid "Tune"
+msgstr "ปรับแต่ง"
+
+#: src/views/Settings.js:1666
+msgid "Time until an inactive viewer connection is treated as closed."
+msgstr "เวลาจนกว่าการเชื่อมต่อของผู้ชมที่ไม่ใช้งานจะถูกถือว่าเป็นการปิด"
+
+#: src/misc/coders/Encoders/video/h264_v4l2m2m.js:181
+msgid "To stabilize the system, increase the HLS segment length for the keyframe interval by 2-3 * (Processing and Control)."
+msgstr "เพื่อรักษาความเสถียรของระบบ ให้เพิ่มความยาวส่วน HLS สำหรับช่วงคีย์เฟรม 2-3 * (การประมวลผลและการควบคุม)"
+
+#: src/views/Settings.js:1357
+#: src/views/Settings.js:2002
+#: src/views/Settings.js:2051
+msgid "Token"
+msgstr "โทเค็น"
+
+#: src/misc/filters/video/Bwdif.js:59
+msgid "Top field"
+msgstr "ฟิลด์บน" 

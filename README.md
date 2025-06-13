@@ -1,17 +1,17 @@
-# Restreamer-UI
+# Bunny Streamer-UI
 
-The user interface of the Restreamer for the connection to the [datarhei Core](https://github.com/datarhei/core)application.
+The user interface of the Bunny Streamer for the connection to the [datarhei Core](https://github.com/datarhei/core) application.
 
 - React
 - Material-UI (MUI)
 
 ## Development
 
-### For the Restreamer interface:
+### For the Bunny Streamer interface:
 
-```
-$ git clone github.com/datarhei/restreamer-ui
-$ cd restreamer-ui
+```bash
+$ git clone github.com/datarhei/bunny-streamer-ui
+$ cd bunny-streamer-ui
 $ yarn install
 $ npm run start
 ```

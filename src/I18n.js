@@ -15,6 +15,7 @@ import { messages as PL } from './locales/pl/messages.js';
 import { messages as PT } from './locales/pt-br/messages.js';
 import { messages as RU } from './locales/ru/messages.js';
 import { messages as SL } from './locales/sl/messages.js';
+import { messages as TH } from './locales/th/messages.js';
 import { messages as TR } from './locales/tr/messages.js';
 import { messages as UK } from './locales/uk/messages.js';
 import { messages as ZH } from './locales/zh-hans/messages.js';
@@ -33,6 +34,7 @@ i18n.load({
 	'pt-br': PT,
 	ru: RU,
 	sl: SL,
+	th: TH,
 	tr: TR,
 	uk: UK,
 	'zh-hans': ZH,
@@ -77,7 +79,7 @@ const getBrowserLanguage = (defaultLanguage) => {
 	return match[0].toLowerCase();
 };
 
-i18n.activate(getLanguage('en', ['en', 'da', 'de', 'el', 'es', 'fr', 'it', 'ko', 'pl', 'pt-br', 'ru', 'sl', 'tr', 'uk', 'zh-hans']));
+i18n.activate(getLanguage('en', ['en', 'da', 'de', 'el', 'es', 'fr', 'it', 'ko', 'pl', 'pt-br', 'ru', 'sl', 'th', 'tr', 'uk', 'zh-hans']));
 
 export default function Provider(props) {
 	return <I18nProvider i18n={i18n}>{props.children}</I18nProvider>;
