@@ -1,4 +1,4 @@
-name: 'Build dev restreamer-ui'
+name: 'Build dev bunny-restreamer-ui'
 
 on:
     workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
             - name: Upload React build as artifact
               uses: actions/upload-artifact@v4
               with:
-                  name: restreamerui-dev-build
+                  name: bunny-restreamerui-dev-build
                   path: build/
 
     build-docker:
@@ -46,7 +46,7 @@ jobs:
             - name: Download React build artifact
               uses: actions/download-artifact@v4
               with:
-                  name: restreamerui-dev-build
+                  name: bunny-restreamerui-dev-build
                   path: build
 
             - name: Docker meta
@@ -54,7 +54,7 @@ jobs:
               uses: docker/metadata-action@v5
               with:
                   images: |
-                      datarhei/restreamer-ui
+                      bekuzaa/bunny-restreamer-ui
                   tags: |
                       type=raw,value=dev
 

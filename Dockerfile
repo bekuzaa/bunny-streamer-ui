@@ -5,13 +5,20 @@ FROM $NODE_IMAGE AS builder
 
 ENV PUBLIC_URL="./"
 
+# Install necessary packages and configure npm for better network resilience
+RUN apk add --no-cache git && \
+	npm config set fetch-retry-mintimeout 20000 && \
+	npm config set fetch-retry-maxtimeout 120000 && \
+	npm config set fetch-retries 5
+
 COPY . /ui
 
 WORKDIR /ui
 
+# Use npm instead of yarn for better network resilience
 RUN cd /ui && \
-	yarn install && \
-	yarn build
+	npm install --legacy-peer-deps --no-audit --no-fund && \
+	npm run build
 
 FROM $CADDY_IMAGE
 

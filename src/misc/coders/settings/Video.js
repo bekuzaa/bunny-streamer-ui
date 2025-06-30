@@ -18,6 +18,7 @@ function Bitrate(props) {
 		{ value: '8192', label: '8192 kbit/s' },
 		{ value: '4096', label: '4096 kbit/s' },
 		{ value: '2048', label: '2048 kbit/s' },
+		{ value: '1500', label: '1500 kbit/s' },
 		{ value: '1024', label: '1024 kbit/s' },
 		{ value: '512', label: '512 kbit/s' },
 		{ value: '256', label: '256 kbit/s' },
@@ -170,7 +171,9 @@ function Size(props) {
 		{ value: '1280x1080', label: '1280x1080' },
 		{ value: '1280x720', label: '1280x720 (HD)' },
 		{ value: '960x540', label: '960x540 (qHD)' },
-		{ value: '640x360', label: '640x360 (nHD)' },
+		{ value: '854x480', label: '854x480 (sHD)' },
+		{ value: '720x576', label: '720x576 (SD)' },
+		{ value: '640x360', label: '640x360 (sSD)' },
 	];
 
 	if (props.allowAuto === true) {
@@ -216,6 +219,8 @@ function Height(props) {
 		{ value: '900', label: '900' },
 		{ value: '720', label: '720' },
 		{ value: '540', label: '540' },
+		{ value: '480', label: '480' },
+		{ value: '576', label: '576' },
 		{ value: '360', label: '360' },
 	];
 
@@ -259,6 +264,8 @@ function Width(props) {
 		{ value: '1600', label: '1600' },
 		{ value: '1280', label: '1280' },
 		{ value: '960', label: '960' },
+		{ value: '854', label: '854' },
+		{ value: '720', label: '720' },
 		{ value: '640', label: '640' },
 	];
 

@@ -7,7 +7,6 @@ import BugReportIcon from '@mui/icons-material/BugReport';
 import Divider from '@mui/material/Divider';
 import Fab from '@mui/material/Fab';
 import Grid from '@mui/material/Grid';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LayersIcon from '@mui/icons-material/Layers';
 import Link from '@mui/material/Link';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -168,13 +167,13 @@ function AboutModal(props) {
 			<ModalContent title="About datarhei Restreamer" onClose={props.onClose} className={classes.modalPaper}>
 				<Grid container spacing={1}>
 					<Grid item xs={12} className={classes.aboutImage}>
-						<PaperThumb image={welcomeImage} title="Welcome to Restreamer v2" height="200px" />
+						<PaperThumb image={welcomeImage} title="Welcome to bunny streamer" height="200px" />
 					</Grid>
 					<Grid item xs={12}>
 						<Typography variant="body1">
 							This is the frontend and a part of a free open source livestreaming solution for video data. The second part is the{' '}
-							<Link color="secondary" href="https://github.com/datarhei/core" target="_blank">
-								datarhei Core
+							<Link color="secondary" href="https://gstreamcdn.com" target="_blank">
+								Streamer Core
 							</Link>{' '}
 							which can be operated separately.
 						</Typography>
@@ -185,27 +184,21 @@ function AboutModal(props) {
 							<strong>Release</strong>: {Version.UI}
 						</Typography>
 						<Typography>
-							<strong>Repo</strong>:{' '}
-							<Link color="secondary" target="_blank" href="https://github.com/datarhei/restreamer">
-								github.com/datarhei/restreamer
-							</Link>
-						</Typography>
-						<Typography>
 							<strong>Licence</strong>:{' '}
-							<Link color="secondary" target="_blank" href="https://github.com/datarhei/restreamer/blob/master/LICENSE">
+							<Link color="secondary" target="_blank" href="https://gstreamcdn.com">
 								Apache License 2.0
 							</Link>
 						</Typography>
 						<Typography>
-							<strong>Donation</strong>:{' '}
-							<Link color="secondary" target="_blank" href="https://patreon.com/datarhei/">
-								patreon.com/datarhei
+							<strong>Contact</strong>:{' '}
+							<Link color="secondary" target="_blank" href="https://gstreamcdn.com">
+								GstreamCDN
 							</Link>
 						</Typography>
 						<Typography>
 							<strong>Website</strong>:{' '}
-							<Link color="secondary" target="_blank" href="https://datarhei.com">
-								datarhei.com
+							<Link color="secondary" target="_blank" href="https://gstreamcdn.com">
+								GstreamCDN
 							</Link>
 						</Typography>
 					</Grid>
@@ -282,18 +275,6 @@ function HeaderMenu(props) {
 						</ListItemIcon>
 						<Trans>About</Trans>
 					</MenuItem>
-					<MenuItem component="a" href="https://docs.datarhei.com/restreamer" target="blank">
-						<ListItemIcon>
-							<HelpOutlineIcon fontSize="small" />
-						</ListItemIcon>
-						<Trans>Docs</Trans>
-					</MenuItem>
-					<MenuItem component="a" href="https://github.com/datarhei/restreamer/issues" target="blank">
-						<ListItemIcon>
-							<BugReportIcon fontSize="small" />
-						</ListItemIcon>
-						<Trans>Issue alert</Trans>
-					</MenuItem>
 					<MenuItem>
 						<ListItemIcon>
 							<TranslateIcon fontSize="small" />
@@ -322,18 +303,6 @@ function HeaderMenu(props) {
 							<RocketLaunchIcon fontSize="small" />
 						</ListItemIcon>
 						<Trans>About</Trans>
-					</MenuItem>
-					<MenuItem component="a" href="https://docs.datarhei.com/restreamer" target="blank">
-						<ListItemIcon>
-							<HelpOutlineIcon fontSize="small" />
-						</ListItemIcon>
-						<Trans>Docs</Trans>
-					</MenuItem>
-					<MenuItem component="a" href="https://github.com/datarhei/restreamer/issues" target="blank">
-						<ListItemIcon>
-							<BugReportIcon fontSize="small" />
-						</ListItemIcon>
-						<Trans>Issue alert</Trans>
 					</MenuItem>
 					<MenuItem>
 						<ListItemIcon>
@@ -369,7 +338,7 @@ export default function Header(props) {
 				<Stack direction="row" justifyContent="space-between" alignItems="center" spacing={0}>
 					<Stack direction="row" alignItems="center" spacing={0} className="headerLeft">
 						<Logo className="fabIcon" />
-						<Typography className="headerTitle">Restreamer</Typography>
+						<Typography className="headerTitle">bunny streamer</Typography>
 					</Stack>
 					<Stack className="headerRight" direction="row" alignItems="center" spacing={0}>
 						<HeaderMenu {...props}></HeaderMenu>

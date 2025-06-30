@@ -1378,7 +1378,25 @@ class Restreamer {
 			storage = 'memfs';
 		}
 
-		let url = `${channelid}.m3u8`;
+		// Get channel name for URL
+		const channel = this.GetChannel(channelid);
+		let channelName = channelid;
+		if (channel && channel.name) {
+			// Sanitize channel name for URL (remove special characters, replace spaces with hyphens)
+			channelName = channel.name
+				.toLowerCase()
+				.replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+				.replace(/\s+/g, '-') // Replace spaces with hyphens
+				.replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+				.replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+			
+			// If sanitized name is empty, use channelid
+			if (channelName.length === 0) {
+				channelName = channelid;
+			}
+		}
+
+		let url = `${channelid}-${channelName}.m3u8`;
 		if (storage === 'memfs') {
 			url = 'memfs/' + url;
 		}
@@ -1677,16 +1695,34 @@ class Restreamer {
 
 		// 1.5 Set hls filename vars
 		const hlsStorage = control.hls.storage;
-		let segmentPlaylistPath = `${channel.channelid}` + (control.hls.master_playlist ? `_{outputid}` : '');
-		let segmentFilePath = `${channel.channelid}` + (control.hls.master_playlist ? `_{outputid}_%04d` : '_%04d');
+		
+		// Get channel name for URL
+		let channelName = channel.channelid;
+		if (channel.name) {
+			// Sanitize channel name for URL (remove special characters, replace spaces with hyphens)
+			channelName = channel.name
+				.toLowerCase()
+				.replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+				.replace(/\s+/g, '-') // Replace spaces with hyphens
+				.replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+				.replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+			
+			// If sanitized name is empty, use channelid
+			if (channelName.length === 0) {
+				channelName = channel.channelid;
+			}
+		}
+		
+		let segmentPlaylistPath = `${channel.channelid}-${channelName}` + (control.hls.master_playlist ? `_{outputid}` : '');
+		let segmentFilePath = `${channel.channelid}-${channelName}` + (control.hls.master_playlist ? `_{outputid}_%04d` : '_%04d');
 		if (hlsStorage === 'diskfs') {
 			// diskfs (path structure)
-			segmentFilePath = `${channel.channelid}` + (control.hls.master_playlist ? `/{outputid}/%Y%m%d/%s` : '/%Y%m%d/%s');
+			segmentFilePath = `${channel.channelid}-${channelName}` + (control.hls.master_playlist ? `/{outputid}/%Y%m%d/%s` : '/%Y%m%d/%s');
 		}
 
 		// 1.6 Set hls filenames
-		const hls_master_playlist = `${channel.channelid}.m3u8`;
-		const hls_fmp4_init_filename = `${channel.channelid}.mp4`;
+		const hls_master_playlist = `${channel.channelid}-${channelName}.m3u8`;
+		const hls_fmp4_init_filename = `${channel.channelid}-${channelName}.mp4`;
 		const hls_segment_playlist = `{${hlsStorage}}/${segmentPlaylistPath}.m3u8`;
 		const hls_segment_filename =
 			`{${hlsStorage}` + (tee_muxer ? '^:' : '') + `}/${segmentFilePath}.` + (!control.hls.lhls && control.hls.version === 7 ? 'mp4' : 'ts');
@@ -1844,16 +1880,16 @@ class Restreamer {
 		// 4. Add output cleanup jobs
 
 		// 4.1 Set hls cleanup filename vars
-		let cleanupSegmentFilePath = `${channel.channelid}` + (control.hls.master_playlist ? `_{outputid}_**` : '_**');
+		let cleanupSegmentFilePath = `${channel.channelid}-${channelName}` + (control.hls.master_playlist ? `_{outputid}_**` : '_**');
 		if (hlsStorage === 'diskfs') {
 			// diskfs (path structure)
-			cleanupSegmentFilePath = `${channel.channelid}` + (control.hls.master_playlist ? `/{outputid}/**` : '/**');
+			cleanupSegmentFilePath = `${channel.channelid}-${channelName}` + (control.hls.master_playlist ? `/{outputid}/**` : '/**');
 		}
 
 		// 4.2 Set hls cleanup filenames
-		const cleanup_global = `${hlsStorage}:/${channel.channelid}**`;
-		const cleanup_hls_master_playlist = `${hlsStorage}:/${channel.channelid}.m3u8`;
-		const cleanup_hls_fmp4_init_filename = `${hlsStorage}:/${channel.channelid}.mp4`;
+		const cleanup_global = `${hlsStorage}:/${channel.channelid}-${channelName}**`;
+		const cleanup_hls_master_playlist = `${hlsStorage}:/${channel.channelid}-${channelName}.m3u8`;
+		const cleanup_hls_fmp4_init_filename = `${hlsStorage}:/${channel.channelid}-${channelName}.mp4`;
 		const cleanup_hls_segment_playlist = `${hlsStorage}:/${segmentPlaylistPath}.m3u8`;
 		const cleanup_hls_segment_filename = `${hlsStorage}:/${cleanupSegmentFilePath}.` + (!control.hls.lhls && control.hls.version === 7 ? 'mp4' : 'ts');
 
@@ -1920,6 +1956,23 @@ class Restreamer {
 		// Set hls storage endpoint
 		const hlsStorage = control.hls.storage;
 
+		// Get channel name for URL
+		let channelName = channel.channelid;
+		if (channel.name) {
+			// Sanitize channel name for URL (remove special characters, replace spaces with hyphens)
+			channelName = channel.name
+				.toLowerCase()
+				.replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+				.replace(/\s+/g, '-') // Replace spaces with hyphens
+				.replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+				.replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+			
+			// If sanitized name is empty, use channelid
+			if (channelName.length === 0) {
+				channelName = channel.channelid;
+			}
+		}
+
 		const snapshot = {
 			type: 'ffmpeg',
 			id: channel.id + '_snapshot',
@@ -1927,7 +1980,7 @@ class Restreamer {
 			input: [
 				{
 					id: 'input_0',
-					address: `{${hlsStorage}}/${channel.channelid}.m3u8`,
+					address: `{${hlsStorage}}/${channel.channelid}-${channelName}.m3u8`,
 					options: [],
 				},
 			],
@@ -1966,7 +2019,24 @@ class Restreamer {
 			return false;
 		}
 
-		const [, err] = await this._call(this.api.MemFSHasFile, `/${channel.channelid}.m3u8`);
+		// Get channel name for URL
+		let channelName = channel.channelid;
+		if (channel.name) {
+			// Sanitize channel name for URL (remove special characters, replace spaces with hyphens)
+			channelName = channel.name
+				.toLowerCase()
+				.replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+				.replace(/\s+/g, '-') // Replace spaces with hyphens
+				.replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+				.replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+			
+			// If sanitized name is empty, use channelid
+			if (channelName.length === 0) {
+				channelName = channel.channelid;
+			}
+		}
+
+		const [, err] = await this._call(this.api.MemFSHasFile, `/${channel.channelid}-${channelName}.m3u8`);
 		if (err !== null) {
 			return false;
 		}
@@ -2624,13 +2694,30 @@ class Restreamer {
 
 		// from the inputs only the first is used and only its options are considered.
 
+		// Get channel name for URL
+		let channelName = channel.channelid;
+		if (channel.name) {
+			// Sanitize channel name for URL (remove special characters, replace spaces with hyphens)
+			channelName = channel.name
+				.toLowerCase()
+				.replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+				.replace(/\s+/g, '-') // Replace spaces with hyphens
+				.replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+				.replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
+			
+			// If sanitized name is empty, use channelid
+			if (channelName.length === 0) {
+				channelName = channel.channelid;
+			}
+		}
+
 		let address = '';
 		let options = [];
 		if (control.source.source === 'hls+memfs') {
-			address = `{memfs}/${channel.channelid}.m3u8`;
+			address = `{memfs}/${channel.channelid}-${channelName}.m3u8`;
 			options.push('-re');
 		} else if (control.source.source === 'hls+diskfs') {
-			address = `{diskfs}/${channel.channelid}.m3u8`;
+			address = `{diskfs}/${channel.channelid}-${channelName}.m3u8`;
 			options.push('-re');
 		} else if (control.source.source === 'rtmp') {
 			address = `{rtmp,name=${channel.channelid}.stream}`;

@@ -1244,7 +1244,7 @@ export default function Settings(props) {
 							<Grid container spacing={2}>
 								<Grid item xs={12}>
 									<Grid item xs={12}>
-										<PaperThumb image={settingsImage} title="Welcome to Restreamer v2" height="200px" />
+										<PaperThumb image={settingsImage} title="Welcome to bunny streamer v2" height="200px" />
 									</Grid>
 								</Grid>
 								<Grid item xs={12}>
@@ -1325,7 +1325,7 @@ export default function Settings(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<Checkbox
-										label={<Trans>Restreamer Service</Trans>}
+										label={<Trans>bunny streamer Service</Trans>}
 										checked={config.service.enable}
 										disabled={env('service.enable')}
 										onChange={handleChange('service.enable')}
@@ -1407,7 +1407,7 @@ export default function Settings(props) {
 									<ErrorBox configvalue="host.name" messages={$tabs.network.messages} />
 									<Typography variant="caption">
 										<Trans>
-											The public reachable domain name of the host this Restreamer is running on. Separate multiple domain names by a
+											The public reachable domain name of the host this bunny streamer is running on. Separate multiple domain names by a
 											comma.
 										</Trans>
 									</Typography>
@@ -2236,24 +2236,24 @@ export default function Settings(props) {
 						{$restart.timeout === false ? (
 							<React.Fragment>
 								<Typography variant="body1">
-									<Trans>Restarting Restreamer Core ...</Trans>
+									<Trans>Restarting bunny streamer Core ...</Trans>
 								</Typography>
 								<LinearProgress sx={{ mt: '1em' }} />
 							</React.Fragment>
 						) : (
 							<React.Fragment>
 								<Typography variant="body1">
-									<Trans>Reconnecting to Restreamer Core failed for the last {RETRIES} seconds.</Trans>
+									<Trans>Reconnecting to bunny streamer Core failed for the last {RETRIES} seconds.</Trans>
 								</Typography>
 								<Typography variant="body1" sx={{ mt: '1em' }}>
 									<Trans>
-										If you enabled Let's Encrypt TLS it might take some time to acquire the certificates. Make sure that Restreamer Core is
-										reachable via port 80 from the internet. Please check the console log of Restreamer Core.
+										If you enabled Let's Encrypt TLS it might take some time to acquire the certificates. Make sure that bunny streamer Core is
+										reachable via port 80 from the internet. Please check the console log of bunny streamer Core.
 									</Trans>
 								</Typography>
 								<Typography variant="body1" sx={{ mt: '1em' }}>
 									<Trans>
-										If you changed the ports, it might be that Restreamer Core restarted already, but it is now available on a different
+										If you changed the ports, it might be that bunny streamer Core restarted already, but it is now available on a different
 										port.
 									</Trans>
 								</Typography>

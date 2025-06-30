@@ -6,8 +6,8 @@
 	<description>{{description}}</description>
 	<author_name>{{author_name}}</author_name>
 	<author_url>{{author_url}}</author_url>
-	<provider_name>datarhei Restreamer</provider_name>
-	<provider_url>https://datarhei.org</provider_url>
+	<provider_name>bunny streamer</provider_name>
+	<provider_url>https://gstreamcdn.com</provider_url>
 	<license>{{license}}</license>
 	<html>{{iframecode}}</html>
 	<width>{{width}}</width>

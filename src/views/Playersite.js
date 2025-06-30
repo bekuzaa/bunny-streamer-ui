@@ -344,7 +344,7 @@ export default function Playersite(props) {
 								<Grid item xs={12}>
 									<Typography variant="body1">
 										<Trans>
-											In addition to the player, the Restreamer offers a complete landingpage, which you can use to present your live
+											In addition to the player, the bunny streamer offers a complete landingpage, which you can use to present your live
 											stream easily and quickly.
 										</Trans>
 									</Typography>
@@ -454,7 +454,7 @@ export default function Playersite(props) {
 								</Grid>
 								<Grid item xs={12}>
 									<Checkbox
-										label={<Trans>Support datarhei Restreamer</Trans>}
+										label={<Trans>Support datarhei bunny streamer</Trans>}
 										checked={$settings.support}
 										disabled={!$settings.playersite}
 										onChange={handleChange('support')}

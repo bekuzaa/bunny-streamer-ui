@@ -1,0 +1,16 @@
+# Thai translations for bunny-streamer-ui
+# Copyright (C) YEAR ORGANIZATION
+# This file is distributed under the same license as the bunny-streamer-ui project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bunny-streamer-ui\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n" 

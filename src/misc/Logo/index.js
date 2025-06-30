@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Logo(props) {
 	const classes = useStyles();
 
-	let link = 'https://datarhei.com';
+	let link = 'https://gstreamcdn.com';
 
 	// eslint-disable-next-line no-useless-escape
 	return (

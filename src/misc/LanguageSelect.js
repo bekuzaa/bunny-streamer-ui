@@ -43,20 +43,7 @@ export default function LanguageSelect(props) {
 	return (
 		<Select className={classes.root} variant="standard" displayEmpty value={i18n.locale} onChange={handleChange}>
 			<MenuItem value="en">English</MenuItem>
-			<MenuItem value="da">Dansk</MenuItem>
-			<MenuItem value="de">Deutsch</MenuItem>
-			<MenuItem value="el">Ελληνικά</MenuItem>
-			<MenuItem value="es">Español</MenuItem>
-			<MenuItem value="fr">Français</MenuItem>
-			<MenuItem value="it">Italiano</MenuItem>
-			<MenuItem value="ko">한국어</MenuItem>
-			<MenuItem value="pl">Polski</MenuItem>
-			<MenuItem value="pt-br">Português</MenuItem>
-			<MenuItem value="ru">Русский</MenuItem>
-			<MenuItem value="sl">Slovenščina</MenuItem>
-			<MenuItem value="tr">Türkçe</MenuItem>
-			<MenuItem value="uk">Українська мова</MenuItem>
-			<MenuItem value="zh-hans">中文(简体)</MenuItem>
+			<MenuItem value="th">ไทย</MenuItem>
 		</Select>
 	);
 }
